@@ -1136,6 +1136,111 @@
     font-style: italic;
   }
 
+  /* Real Reviews (프리미엄 섹션 내부) */
+  .real-reviews {
+    margin: clamp(40px, 7vw, 64px) 0 clamp(28px, 5vw, 36px);
+  }
+  .rr-header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .rr-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 215, 0, 0.14);
+    border: 1px solid rgba(255, 215, 0, 0.38);
+    color: #FFD700;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 999px;
+    letter-spacing: 0.8px;
+    margin-bottom: 14px;
+  }
+  .rr-title {
+    color: #fff;
+    font-size: clamp(22px, 3.6vw, 30px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin: 0 0 8px;
+    line-height: 1.2;
+  }
+  .rr-sub {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 13px;
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
+  .rr-list {
+    display: grid;
+    gap: 14px;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .rr-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 20px 22px;
+    color: #E2E8F0;
+    line-height: 1.7;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .rr-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .rr-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06));
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .rr-avatar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.35);
+    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 12c2.8 0 5-2.2 5-5s-2.2-5-5-5-5 2.2-5 5 2.2 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z' fill='black'/></svg>") center / 20px 20px no-repeat;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 12c2.8 0 5-2.2 5-5s-2.2-5-5-5-5 2.2-5 5 2.2 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z' fill='black'/></svg>") center / 20px 20px no-repeat;
+  }
+  .rr-meta-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .rr-date {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .rr-stars {
+    font-size: 14px;
+    color: #FFD700;
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+  .rr-body {
+    font-size: 14.5px;
+    color: #E2E8F0;
+    line-height: 1.75;
+    margin: 0;
+    letter-spacing: -0.005em;
+  }
+  .rr-body strong {
+    color: #FFD700;
+    font-weight: 700;
+  }
+
   /* Paid CTA — Dark with Gold underline */
   .btn-cta-paid {
     display: inline-flex;
@@ -1893,25 +1998,6 @@
       <p>전자책 받아보시고, 카톡방 3일만 읽어보세요. 그 이후 판단은 여러분이 하시면 됩니다.</p>
     </div>
 
-    <div class="testimonial-grid">
-      <article class="testimonial reveal">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-quote">"계약서 앞에서 아무것도 모르는 상태로 들어갔다가, 용어 하나하나가 눈에 들어오기 시작했어요."</p>
-        <p class="testimonial-author">— 34세 직장인, 첫 집 준비 중</p>
-      </article>
-
-      <article class="testimonial reveal">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-quote">"미국주식 3년 했는데 왜 손해인지 몰랐어요. 금융쌤 말대로 포트폴리오 봤더니 쏠림이 보였습니다."</p>
-        <p class="testimonial-author">— 41세 자영업자</p>
-      </article>
-
-      <article class="testimonial reveal">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-quote">"무료방인데 진짜 매일 체크하게 되더라고요. 이제 습관이 됐어요."</p>
-        <p class="testimonial-author">— 38세 맞벌이 직장인</p>
-      </article>
-    </div>
   </div>
 </section>
 
@@ -1993,6 +2079,72 @@
         맞지 않으면 그대로 나가셔도 됩니다.<br>
         <strong>그래서 무료방에 먼저 오시라는 거예요.</strong>
       </p>
+    </div>
+
+    <!-- 실제 수강생 후기 -->
+    <div class="real-reviews reveal">
+      <div class="rr-header">
+        <span class="rr-badge">✓ 실제 프리미엄 수강생 후기</span>
+        <h3 class="rr-title">수업 들은 분들이 직접 남긴 후기</h3>
+        <p class="rr-sub">프리미엄 멤버십 커뮤니티 · 2025년 누적 후기</p>
+      </div>
+
+      <div class="rr-list">
+        <article class="rr-card">
+          <div class="rr-meta">
+            <span class="rr-avatar" aria-hidden="true"></span>
+            <div class="rr-meta-text">
+              <div class="rr-date">2025년 9월 16일</div>
+              <div class="rr-stars" aria-label="5점 만점에 5점">★★★★★</div>
+            </div>
+          </div>
+          <p class="rr-body">쏟아지는 정보 속에 <strong>핵심 정보만 쏙쏙 찝어서</strong> 설명해주셔서 직접 자신의 포폴에 적용하기 매우 유용합니다. 어렵게 생각되었던 경제시장을 쉽게 이해할 수 있어서 좋았습니다.</p>
+        </article>
+
+        <article class="rr-card">
+          <div class="rr-meta">
+            <span class="rr-avatar" aria-hidden="true"></span>
+            <div class="rr-meta-text">
+              <div class="rr-date">2025년 3월 15일</div>
+              <div class="rr-stars" aria-label="5점 만점에 5점">★★★★★</div>
+            </div>
+          </div>
+          <p class="rr-body">우연한 계기로 이 모임에 참여하게 되었습니다. <strong>기초부터 전문적인 내용까지</strong> 궁금했던 부분들을 시원하게 해소할 수 있었고, 처음에는 어떻게 이렇게 열정적으로 나눠주실까 싶어 의심이 들 정도였어요. 즐겁게 공부할 수 있었습니다!</p>
+        </article>
+
+        <article class="rr-card">
+          <div class="rr-meta">
+            <span class="rr-avatar" aria-hidden="true"></span>
+            <div class="rr-meta-text">
+              <div class="rr-date">2025년 3월 13일</div>
+              <div class="rr-stars" aria-label="5점 만점에 5점">★★★★★</div>
+            </div>
+          </div>
+          <p class="rr-body">투자에 대해 <strong>전혀 모르던 상태</strong>에서 강의를 듣게 되었는데, 생각보다 훨씬 쉽게 설명해 주셔서 부담없이 시작할 수 있었습니다. 투자에 관심은 있지만 어떻게 시작해야 할지 막막했던 분들에게 강력 추천합니다.</p>
+        </article>
+
+        <article class="rr-card">
+          <div class="rr-meta">
+            <span class="rr-avatar" aria-hidden="true"></span>
+            <div class="rr-meta-text">
+              <div class="rr-date">2025년 2월 25일</div>
+              <div class="rr-stars" aria-label="5점 만점에 5점">★★★★★</div>
+            </div>
+          </div>
+          <p class="rr-body">단순히 설명 뿐만 아니라 <strong>배운 내용을 과제로 제출하는 방식</strong>으로 진행하기 때문에 배운 것을 직접 활용을 할 수 있는 것도 해당 강의의 큰 장점이라고 생각합니다!</p>
+        </article>
+
+        <article class="rr-card">
+          <div class="rr-meta">
+            <span class="rr-avatar" aria-hidden="true"></span>
+            <div class="rr-meta-text">
+              <div class="rr-date">2025년 2월 19일</div>
+              <div class="rr-stars" aria-label="5점 만점에 5점">★★★★★</div>
+            </div>
+          </div>
+          <p class="rr-body">좀 더 일찍 들었으면 더 좋았겠다는 생각이 들어요! 재테크 수업을 듣고 난 후로 <strong>경제 뉴스와 증시에 대한 관심이 확 늘었어요.</strong></p>
+        </article>
+      </div>
     </div>
 
     <div style="text-align:center; margin-top: 8px;" class="reveal">
